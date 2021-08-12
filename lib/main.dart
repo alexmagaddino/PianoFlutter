@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:piano_flutter/components/white-key.dart';
-import 'package:piano_flutter/vo/notes.dart';
+import 'package:piano_flutter/components/keyboard.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,12 +12,9 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-          appBar: AppBar(
-            title: Text('Piano'),
-          ),
-          body: Column(
-            children: Note.values.map((n) => WhiteKey(n)).toList(),
-          ),
-        ),
+            appBar: AppBar(
+              title: Text('Piano'),
+            ),
+            body: Keyboard()),
       );
 }

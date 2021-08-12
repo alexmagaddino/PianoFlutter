@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:piano_flutter/vo/notes.dart';
 
-class WhiteKey extends StatelessWidget {
+class KeyboardKey extends StatelessWidget {
   final Note _note;
   final _player = AudioPlayer();
   Color? _background;
   Color? _textColor;
   double? _width;
 
-  WhiteKey(this._note) {
+  KeyboardKey(this._note) {
     if (_note.isWhite) {
       _width = double.infinity;
       _background = Colors.white;
