@@ -24,8 +24,8 @@ class KeyboardKey extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Container(
+        margin: EdgeInsets.symmetric(horizontal: 8, vertical: 0),
         width: _width,
-        height: 50,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
               primary: _background, onPrimary: _textColor),
