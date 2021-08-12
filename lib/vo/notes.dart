@@ -1,7 +1,23 @@
-enum Note { A, Ab, B, Bb, C, D, Db, E, Eb, F, G, Gb }
+enum Note {
+  C,
+  D,
+  Db,
+  E,
+  Eb,
+  F,
+  G,
+  Gb,
+  A,
+  Ab,
+  B,
+  Bb,
+}
 
 extension NoteExt on Note {
   String get prettyValue => this.toString().split('.').last;
+
+  bool get isWhite => [Note.Ab, Note.Bb, Note.Db, Note.Eb, Note.Gb]
+      .every((note) => this != note);
 
   String get audioRes {
     switch (this) {
