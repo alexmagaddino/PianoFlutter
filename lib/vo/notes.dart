@@ -1,16 +1,16 @@
 enum Note {
   C,
-  D,
   Db,
-  E,
+  D,
   Eb,
+  E,
   F,
-  G,
   Gb,
-  A,
+  G,
   Ab,
-  B,
+  A,
   Bb,
+  B,
 }
 
 extension NoteExt on Note {

@@ -8,15 +8,15 @@ class KeyboardKey extends StatelessWidget {
   final _player = AudioPlayer();
   Color? _background;
   Color? _textColor;
-  double? _width;
+  double? _height;
 
   KeyboardKey(this._note) {
     if (_note.isWhite) {
-      _width = double.infinity;
+      _height = double.infinity;
       _background = Colors.white;
       _textColor = Colors.black;
     } else {
-      _width = 200;
+      _height = 200;
       _background = Colors.black;
       _textColor = Colors.white;
     }
@@ -24,8 +24,9 @@ class KeyboardKey extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Container(
-        margin: EdgeInsets.symmetric(horizontal: 8, vertical: 0),
-        width: _width,
+        margin: EdgeInsets.only(bottom: 10),
+        width: 50,
+        height: _height,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
               primary: _background, onPrimary: _textColor),
